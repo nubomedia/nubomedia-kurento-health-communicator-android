@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/video_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:keepScreenOn="true"
+    android:orientation="horizontal"
+    tools:context=".FullscreenActivity" >
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/video_receive_surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal" />
+
+    <ImageView
+        android:id="@+id/bgCall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:src="@drawable/bg_call" />
+
+    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:orientation="vertical" >
+
+        <TextView
+                android:id="@+id/peerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|center"
+                android:text="UserTest"
+                android:background="@android:color/transparent"
+                android:textColor="#ffffff"
+                android:textSize="20dip"
+                android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/messageWait"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_centerInParent="true"
+            android:background="@android:color/transparent"
+            android:padding="8dip"
+            android:text="@string/call_wait_message"
+            android:textColor="#ffffff"
+            android:textSize="20dip"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/show_call_menu_button"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_gravity="right|center_horizontal|top"
+            android:layout_marginRight="10dp"
+            android:background="@android:drawable/ic_menu_more" />
+
+        <LinearLayout
+            android:id="@+id/call_info_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@android:drawable/spinner_background"
+            android:orientation="vertical" >
+
+            <ImageButton
+                android:id="@+id/show_stats_button"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="right|center_horizontal"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_action_about" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/call_menu_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@android:drawable/spinner_background"
+            android:orientation="vertical" >
+
+            <ToggleButton
+                android:id="@+id/enable_audio_button"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="right|center_horizontal"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/audio_enable_disable_button"
+                android:textOff=""
+                android:textOn="" />
+
+            <ToggleButton
+                android:id="@+id/enable_video_button"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="right|center_horizontal"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/video_enable_disable_button"
+                android:textOff=""
+                android:textOn="" />
+
+            <ToggleButton
+                android:id="@+id/enable_loud_speaker_button"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="right|center_horizontal"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/speaker_enable_disable_button"
+                android:textOff=""
+                android:textOn="" />
+
+            <ImageButton
+                android:id="@+id/switch_camera_button"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="right|center_horizontal"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_action_switch_camera" />
+
+            <ImageButton
+                android:id="@+id/call_forward_menu_button"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_gravity="right|center_horizontal"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/ic_action_call" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/call_hangup_button"
+        android:layout_width="60dip"
+        android:layout_height="60dip"
+        android:layout_gravity="right|center_horizontal|bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/ic_disconnect" />
+
+     <LinearLayout
+            android:id="@+id/call_muted_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:orientation="horizontal" >
+
+		    <ImageView
+		        android:id="@+id/ownAudioMuted"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:visibility="gone"
+		        android:src="@drawable/ic_action_mic_muted_light" />
+
+		    <ImageView
+		        android:id="@+id/ownVideoMuted"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:visibility="gone"
+		        android:src="@drawable/ic_action_camera_off_light" />
+	</LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/call_dialog_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:background="#66000000"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:layout_marginRight="-6dip"
+            android:layout_marginTop="-2dip" >
+
+            <include
+                android:id="@+id/call_includer"
+                layout="@layout/call_to_dialog" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</FrameLayout>

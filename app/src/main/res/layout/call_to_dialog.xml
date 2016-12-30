@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="325dp"
+    android:layout_gravity="center"
+    android:background="@android:drawable/picture_frame"
+    android:gravity="center_vertical"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dip"
+        android:layout_marginTop="8dip"
+        android:paddingLeft="16dip"
+        android:text="@string/popup_call_to_title"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18dip"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dip"
+        android:layout_marginTop="4dip"
+        android:background="@android:color/holo_blue_light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_margin="8dip" >
+
+        <ListView
+            android:id="@+id/call_to_user_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#33000000" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dip"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/call_to_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/popup_call_button" />
+
+        <FrameLayout
+            android:layout_width="1dip"
+            android:layout_height="50dip"
+            android:background="@android:color/darker_gray" >
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/popup_call_cancel_button" />
+    </LinearLayout>
+
+</LinearLayout>

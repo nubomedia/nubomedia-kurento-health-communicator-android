@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/log_out"
+        android:icon="@drawable/ic_leave_light"
+        android:showAsAction="always"
+        android:title="@string/log_out">
+    </item>
+    <item
+        android:id="@+id/allow_editing"
+        android:icon="@drawable/ic_action_edit"
+        android:showAsAction="always"
+        android:title="@string/edit_user_allow">
+    </item>
+
+</menu>

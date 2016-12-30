@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:layout_width="0dip"
+        android:layout_height="0dip" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageView
+        android:id="@+id/bg_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.3" />
+
+    <ImageView
+        android:id="@+id/group_image_blue"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="15dip"
+        android:background="@android:color/holo_blue_dark"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dip"
+        android:paddingRight="16dip"
+        android:paddingTop="16dip" >
+
+        <ImageView
+            android:id="@+id/group_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/edit_user_activity_contact_picture"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_contact_picture" />
+
+        <RelativeLayout
+            android:id="@+id/name_layout"
+            android:layout_width="220dip"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/group_image"
+            android:orientation="vertical"
+            android:paddingLeft="8dip" >
+
+            <TextView
+                android:id="@+id/name_txt_no_editable"
+                android:layout_width="170dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:singleLine="true"
+                android:textSize="20dip"
+                android:textStyle="bold" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/name_txt_editable"
+                android:layout_width="170dip"
+                android:layout_height="wrap_content"
+                android:hint="@string/edit_user_activity_name"
+                android:singleLine="true"
+                android:textColor="@android:color/holo_blue_dark"
+                android:visibility="gone" >
+            </EditText>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/phone_layout"
+            android:layout_width="220dip"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_layout"
+            android:layout_toRightOf="@id/group_image"
+            android:orientation="vertical"
+            android:paddingLeft="8dip" >
+
+            <TextView
+                android:id="@+id/phone_txt_no_editable"
+                android:layout_width="170dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dip"
+                android:singleLine="true"
+                android:textSize="20dip" >
+            </TextView>
+
+            <EditText
+                android:id="@+id/phone_txt_editable"
+                android:layout_width="170dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-6dip"
+                android:hint="@string/edit_user_activity_phone"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@android:color/holo_blue_dark"
+                android:visibility="gone" >
+            </EditText>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/edit_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/ic_menu_edit" />
+
+        <ImageView
+            android:id="@+id/cancel_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/edit_image"
+            android:layout_marginTop="4dip"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:visibility="gone" />
+
+        <ListView
+            android:id="@+id/user_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/group_image"
+            android:layout_marginBottom="16dip"
+            android:layout_marginTop="16dip"
+            android:background="#33000000" />
+    </RelativeLayout>
+
+</RelativeLayout>

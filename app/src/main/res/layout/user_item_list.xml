@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="60dip" >
+
+    <RelativeLayout
+        android:id="@+id/group_member_cell"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/user_image_layout"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_centerVertical="true" >
+
+            <ImageView
+                android:id="@+id/user_image"
+                android:layout_width="32dip"
+                android:layout_height="32dip"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/user_name_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/user_status_layout"
+            android:layout_toRightOf="@+id/user_image_layout" >
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textSize="20dip" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/user_status_layout"
+            android:layout_width="60dip"
+            android:layout_height="60dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingRight="16dip" >
+
+            <TextView
+                android:id="@+id/user_status"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="4"
+                android:gravity="center"
+                android:text="Data"
+                android:textSize="12dip" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

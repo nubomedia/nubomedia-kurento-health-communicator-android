@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="url_send_message">/khcrest/message/v2/send</string>
+    <string name="url_retrieve_message_1">/khcrest/v2/message/</string>
+    <string name="url_retrieve_message_2">/message/</string>
+    <string name="url_get_user_data">/khcrest/v2/user</string>
+    <string name="url_get_user_login">/khcrest/v2/user/me</string>
+    <string name="url_command">/khcrest/v2/command/</string>
+    <string name="url_command_transaction">/khcrest/v2/command/transaction</string>
+    <string name="url_get_channel">/khcrest/v2/channel</string>
+    <string name="url_get_content">/khcrest/v2/message/</string>
+    <string name="url_user_avatar">/khcrest/v2/user/%1$s/avatar/small</string>
+    <string name="url_group_avatar">khcrest/v2/group/%1$s/avatar/small</string>
+    <string name="url_get_recovery_code">/khcrest/v2/password/code</string>
+    <string name="url_send_recovery_code">/khcrest/v2/password/reset</string>
+    <string name="url_account">/khcrest/v2/account/%1$s/info/</string>
+    <string name="url_create_user">/khcrest/v2/account/%1$s/user/</string>
+    <string name="url_search_user">/khcrest/v2/user/search/invite/group/%1$s"</string>
+    <string name="url_log">/khcrest/v2/channel/%1$s/log</string>
+    <string name="url_sync">/khcrest/sync</string>
+
+</resources>

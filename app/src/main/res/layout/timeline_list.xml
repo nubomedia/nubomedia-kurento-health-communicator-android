@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_activity_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <ImageView
+        android:id="@+id/bg_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.3" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:paddingTop="16dip" />
+
+    <RelativeLayout
+        android:id="@+id/loading_data_layer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#33000000"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/loading_data_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dip"
+            android:text="@string/loading_data"
+            android:textSize="16dip" />
+
+        <ImageView
+            android:id="@+id/reset_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/loading_data_text"
+            android:layout_alignRight="@+id/loading_data_text"
+            android:src="@android:drawable/ic_menu_revert" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:background="#66000000"
+        android:padding="8dip"
+        android:text="@string/sync"
+        android:textColor="#ffffff"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</RelativeLayout>

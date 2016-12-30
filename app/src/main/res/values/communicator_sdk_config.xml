@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="main_activity_package">eu.nubomedia.nubomedia_kurento_health_communicator_android.kc_and_client.ui.activity.TimelineListActivity</string>
+
+    <string name="messages_activity_package">eu.nubomedia.nubomedia_kurento_health_communicator_android.kc_and_client.ui.activity.MessagesActivity</string>
+
+
+    <string name="incoming_call_package"></string>
+        <string name="video_call_package"></string>
+</resources>

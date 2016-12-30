@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="jsonrpc-ws-android-1.0.6">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/fi.vtt.nubomedia/jsonrpc-ws-android/1.0.6/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/fi.vtt.nubomedia/jsonrpc-ws-android/1.0.6/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/fi.vtt.nubomedia/jsonrpc-ws-android/1.0.6/fbcac2b44acddef8fddeb865aa4b1c341f6722aa/jsonrpc-ws-android-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

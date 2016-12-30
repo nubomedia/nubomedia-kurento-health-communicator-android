@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_activity_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingLeft="16dip"
+    android:paddingRight="16dip"
+    android:paddingTop="16dip" >
+
+    <!-- <ImageView -->
+    <!-- android:layout_width="wrap_content" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:layout_alignParentBottom="true" -->
+    <!-- android:layout_centerHorizontal="true" -->
+    <!-- android:alpha="0.3" -->
+    <!-- android:src="@drawable/bg_doctor_droid" /> -->
+
+    <RelativeLayout
+        android:id="@+id/media_layer"
+        android:layout_width="fill_parent"
+        android:layout_height="100dip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip" >
+
+        <ImageView
+            android:id="@+id/media_picture"
+            android:layout_width="fill_parent"
+            android:layout_height="100dip"
+            android:scaleType="centerCrop"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/open_media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="8dip"
+            android:src="@android:drawable/ic_menu_view"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fake_layer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/media_layer"
+        android:layout_marginBottom="80dip"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:layout_marginTop="16dip"
+        android:background="@drawable/rounded_shape_grey"
+        android:orientation="vertical"
+        android:padding="16dip" />
+
+    <LinearLayout
+        android:id="@+id/data_layer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/media_layer"
+        android:layout_marginBottom="80dip"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:layout_marginTop="16dip"
+        android:orientation="vertical"
+        android:padding="16dip" >
+
+        <LinearLayout
+            android:id="@+id/from_layer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dip"
+                android:text="@string/from_layer_string"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/from_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/timestamp_layer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dip"
+                android:text="@string/timestamp_layer_string"
+                android:textSize="16dip" />
+
+            <TextView
+                android:id="@+id/timestamp_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16dip" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/body_layer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dip"
+                android:text="@string/body_layer_string"
+                android:textSize="16dip" />
+
+            <ScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/body_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dip" />
+            </ScrollView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ack_button"
+        android:layout_width="fill_parent"
+        android:layout_height="48dip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dip"
+        android:src="@drawable/ic_ok" />
+
+</RelativeLayout>

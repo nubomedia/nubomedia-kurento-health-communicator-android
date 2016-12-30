@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_activity_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dip" >
+
+        <TextView
+            android:id="@+id/delay_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/delay_message" />
+
+        <EditText
+            android:id="@+id/delay_text"
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/delay_label"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:text="0" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@android:color/darker_gray" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dip" >
+
+        <TextView
+            android:id="@+id/plain_messages_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/test_plain_message" />
+
+        <EditText
+            android:id="@+id/plain_messages_text"
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/plain_messages_label"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/plain_messages_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/btn_send_text" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@android:color/darker_gray" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dip" >
+
+        <TextView
+            android:id="@+id/media_messages_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/test_media_message" />
+
+        <EditText
+            android:id="@+id/media_messages_text"
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/media_messages_label"
+            android:digits="0123456789"
+            android:inputType="number"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/media_messages_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/btn_send_text" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/media_button"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_margin="8dip"
+        android:src="@android:drawable/ic_menu_gallery" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="2dip"
+        android:background="@android:color/darker_gray" >
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/log_info"
+        android:layout_width="50dip"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/log"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="8dip"
+        android:text="@string/log" />
+
+</LinearLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Agenda -->
+    <string name="package_name">com.kurento.apps.android.hnj.uci.user</string>
+    <string name="auth_label">Kurento Health Servicer</string>
+    <string name="account_preferences_action">com.kurento.apps.android.hnj.uci.user.ACCOUNT_EDIT</string>
+    <string name="account_type">com.kurento.apps.android.hnj.uci.user</string>
+    <string name="mime">vnd.android.cursor.item/vnd.kurento.hnj.uci.profile</string>
+    <string name="application">uci</string>
+    <string name="group">other</string>
+
+    <!-- Server -->
+    <!--<string name="host">${khc.server.host}</string>
+    <string name="service_port">${khc.server.port}</string>
+    <string name="protocol">${khc.server.protocol}</string>-->
+
+    <string name="host">communicator.kurento.com</string>
+    <string name="service_port">8080</string>
+    <string name="protocol">http</string>
+
+    <integer name="standard_port">8080</integer>
+
+    <string name="standard_protocol">http</string>
+
+    <!-- Account -->
+    <string name="account_id"></string>
+    <string name="account_name">accountName</string>
+
+    <integer name="max_messages">100</integer>
+    <integer name="media_total_size">1000</integer>
+    <integer name="video_recording_duration_limit">60</integer> <!-- 0 for unlimited -->
+
+    <!-- QoS -->
+    <string name="qos_gcm_timeout">144000</string>
+
+    <!-- Stun/Turn -->
+    <bool name="active_stun">true</bool>
+    <bool name="active_turn">true</bool>
+    <string name="stunHost">${stun.host}</string>
+    <string name="stunPort">${stun.port}</string>
+    <string name="stunUser">${stun.user}</string>
+    <string name="stunPassword">${stun.password}</string>
+    <string name="turnHost">${turn.host}</string>
+    <string name="turnPort">${turn.port}</string>
+    <string name="turnUser">${turn.user}</string>
+    <string name="turnPassword">${turn.password}</string>
+
+    <!-- Notifications -->
+    <bool name="updated_messages_notification">true</bool>
+    <bool name="qos_service_notification">true</bool>
+
+    <!-- Activate in preferences menu-->
+    <bool name="active_preference_protocol">true</bool>
+    <bool name="active_preference_host">true</bool>
+    <bool name="active_preference_account">true</bool>
+    <bool name="active_preference_port">true</bool>
+    <bool name="active_preference_alerts">true</bool>
+    <bool name="active_preference_message_num">true</bool>
+    <bool name="active_preference_storage_size">true</bool>
+    <bool name="active_preference_init_call_with_video">true</bool>
+    <bool name="active_preference_default_camera">true</bool>
+    <bool name="active_preference_stun">true</bool>
+    <bool name="active_preference_turn">true</bool>
+    <bool name="active_preference_sync">true</bool>
+    <bool name="active_preference_find_users">true</bool>
+    <bool name="active_preference_version">true</bool>
+    <bool name="active_preference_buil_num">true</bool>
+
+    <!-- VideoCall init mode-->
+    <bool name="videocall_init_video_off">false</bool>
+    <bool name="videocall_init_sound_off">false</bool>
+
+    <bool name="ringtone_from_audio_file">true</bool>
+
+
+    <!-- VideoCall -->
+    <bool name="active_local_render">true</bool>
+    <bool name="active_remote_render">true</bool>
+    <string name="hide_call_menu_time">${app.hide.call.menu.timer}</string>
+
+    <!-- Groups -->
+    <bool name="active_group_edit_menu">true</bool>
+
+    <!-- Users -->
+    <bool name="active_videocall_action">true</bool>
+    <bool name="active_call_action">true</bool>
+    <bool name="active_action_mode">true</bool>
+
+
+</resources>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_activity_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/help_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dip"
+        android:text="@string/select_conversation"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/tabs_layer"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:layout_below="@id/help_text"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/groups_tab"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/title_bar" >
+
+            <TextView
+                android:id="@+id/groups_tab_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/groups_tag"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/groups_tab_select"
+                android:layout_width="100dip"
+                android:layout_height="4dip"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dip"
+                android:src="@android:color/holo_blue_light" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="1dip"
+            android:layout_height="50dip"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:id="@+id/users_tab"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/title_bar" >
+
+            <TextView
+                android:id="@+id/users_tab_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/users_tag"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/users_tab_select"
+                android:layout_width="100dip"
+                android:layout_height="4dip"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="4dip"
+                android:src="@android:color/holo_blue_light"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tabs_layer"
+        android:background="#00000000" />
+
+    <RelativeLayout
+        android:id="@+id/dialog_background"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#66000000"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="-6dip"
+            android:layout_marginTop="-2dip" >
+
+            <include
+                android:id="@+id/includer"
+                layout="@layout/create_group_dialog" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

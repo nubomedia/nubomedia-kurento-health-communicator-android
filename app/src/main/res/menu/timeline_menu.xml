@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/server_status"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/agenda_menu"
+        android:icon="@drawable/ic_group_light"
+        android:showAsAction="always"
+        android:title="@string/agenda_menu"/>
+    <item
+        android:id="@+id/main_menu_preferences"
+        android:icon="@drawable/ic_settings_light"
+        android:showAsAction="always"
+        android:title="@string/main_menu_preferences"/>
+    <item
+        android:id="@+id/main_menu_select_account"
+        android:icon="@drawable/ic_profile_light"
+        android:showAsAction="always"
+        android:title="@string/account_preferences_edit_account_summary"
+        android:enabled="true"
+        android:visible="true"/>
+
+</menu>

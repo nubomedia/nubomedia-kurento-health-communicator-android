@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="account_needed">Necesitas un número de cuenta de la aplicación para acceder&#8230;</string>
+    <string name="account_ok">Ok</string>
+    <string name="account_tittle">Seleccionar cuenta</string>
+    <string name="re_sync_title">Sincronizar aplicación</string>
+    <string name="re_sync_text">Este proceso sincronizara la aplicación, usese solo si se nota algun fallo en el funcionamiento de la aplicación</string>
+    <string name="re_sync_ok">Sincronizar</string>
+    <string name="re_sync_cancel">Cancel</string>
+    <string name="re_sync_error">Error sincronizando</string>
+    <string name="get_contacts_title">Buscar contactos</string>
+    <string name="get_contacts_text">Buscar contactos en tu dispositivo?</string>
+    <string name="get_contacts_ok">Si</string>
+    <string name="get_contacts_cancel">Cancelar</string>
+
+    <!-- Main -->
+    <string name="main_button_take_picture">Hacer foto</string>
+    <string name="main_button_record_video">Grabar vídeo</string>
+    <string name="main_button_gsm_call">Llamar</string>
+    <string name="main_select_account">Seleccionar un grupo</string>
+    <string name="main_no_account_error_message">Se necesita una cuenta para que la aplicación funcione</string>
+    <string name="loading_data">La descarga de contenidos puede tardar algún tiempo, si se prolonga más de 5 min, haga click en el botón.</string>
+    <string name="sync_tittle">Sincronizando usuario</string>
+    <string name="sync_text">Este proceso puede llevar un tiempo la primera vez&#8230;</string>
+    <string name="sync">Sincronizando&#8230;</string>
+    <string name="preferences_sync">Sincronizar app</string>
+    <string name="preferences_account">Encontrar usuarios</string>
+    <string name="log">Log</string>
+
+    <!-- Upload -->
+    <string name="upload_preview_description">Descripción preliminar</string>
+    <string name="upload_description">Descripción</string>
+    <string name="upload_button_upload">Subir</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="uploading_media">Subiendo&#8230;</string>
+    <string name="upload_fail">Error en el envio</string>
+    <string name="upload_ok">Enviado!</string>
+    <string name="upload_offline">No hay conexión&#8230;</string>
+
+    <!-- Timeline list -->
+    <string name="delete_timeline">Borrar timeline</string>
+    <string name="add_timeline">Añadir timeline</string>
+    <string name="agenda_menu">Agenda</string>
+
+    <!-- Messages list activity -->
+    <string name="loading">Cargando&#8230;</string>
+    <string name="no_messages">No hay mensajes, intentelo más tarde.</string>
+    <string name="refresh">Recargar</string>
+    <string name="donwload_fail">Error de descarga&#8230;</string>
+    <string name="reply">Responder al mensaje</string>
+    <string name="no_refresh_messages">No hay más mensajes.</string>
+    <string name="timeline_no_enabled">No eres un miembro de este grupo, no puedes enviar mensajes.</string>
+
+    <!-- Single message activity -->
+    <string name="from_layer_string">De:</string>
+    <string name="to_layer_string">A:</string>
+    <string name="timestamp_layer_string">Fecha:</string>
+    <string name="body_layer_string">Mensaje:</string>
+    <string name="send_ack_message">¿Estás seguro que quieres aceptar esta tarea?</string>
+    <string name="send_ack_yes">Si</string>
+    <string name="send_ack_no">No</string>
+    <string name="loading_media">Cargando&#8230;</string>
+
+    <!-- popup media -->
+    <string name="select_media">Seleccionar media</string>
+    <string name="popup_camera">Foto</string>
+    <string name="popup_vidio">Vídeo</string>
+    <string name="popup_gallery">Galería</string>
+    <string name="no_media">No hay ficheros que mostrar</string>
+    <string name="media_attach">Se adjunto un fichero</string>
+
+    <!-- popup call -->
+    <string name="popup_call">Llamada Telefónica</string>
+    <string name="popup_video_call">Vídeo Llamada</string>
+
+    <!-- Message status -->
+    <string name="msg_sending">Enviando</string>
+    <string name="msg_sent">Enviado</string>
+    <string name="msg_received">Recibido</string>
+    <string name="msg_new">Nuevo</string>
+    <string name="msg_readed">Leído</string>
+    <string name="new_message_timeline">(Nuevo mensaje)</string>
+
+    <!-- user values -->
+    <string name="account_preferences">Preferencias de la cuenta</string>
+    <string name="account_preferences_edit_account">Editar cuenta</string>
+    <string name="account_preferences_edit_account_summary">Editar perfil</string>
+    <string name="login_activity_username_hint">Correo electrónico</string>
+    <string name="login_activity_login_btn">Entrar</string>
+    <string name="login_activity_register_btn">¿No tienes cuenta? registrate aquí!</string>
+    <string name="login_activity_recovery_btn">Recuperar contraseña</string>
+    <string name="login_activity_fail_bad_username">Por favor introduzca un nombre de usuario correcto</string>
+    <string name="login_activity_invalid_credentials">Credenciales erroneos</string>
+    <string name="login_activity_login_fail">Error, ¿no recuerda la clave? recupérala aquí&#8230;</string>
+    <string name="login_activity_fail_bad_passwd">Por favor introduzca una contraseña correcta</string>
+    <string name="login_activity_password_hint">Contraseña</string>
+    <string name="login_activity_logging_in">Entrando</string>
+    <string name="login_activity_checking_account">Accediendo al servidor</string>
+    <string name="please_wait">Por favor espere</string>
+    <string name="please_wait_login">Por favor espere, el proceso puede que tarde&#8230;</string>
+    <string name="edit_user_activity_username">Nombre de usuario</string>
+    <string name="edit_user_activity_password">Cambiar contraseña</string>
+    <string name="edit_user_activity_repeat_password">Repita la contraseña</string>
+    <string name="edit_user_activity_fullname">Nombre completo</string>
+    <string name="edit_user_activity_name">Nombre</string>
+    <string name="edit_user_activity_phone">Teléfono</string>
+    <string name="edit_user_activity_surname">Apellidos</string>
+    <string name="edit_user_activity_email">Correo electrónico</string>
+    <string name="edit_user_activity_email_no_editable">Correo electrónico (No editable)</string>
+    <string name="edit_user_activity_nickname">Apodo</string>
+    <string name="edit_user_activity_upload">Guardar cambios</string>
+    <string name="edit_user_activity_telephone">Teléfono</string>
+    <string name="edit_user_activity_contact_picture">Foto de contacto</string>
+    <string name="edit_user_activity_enter_all">Por favor, rellene todos los datos</string>
+    <string name="edit_user_activity_enter_username">Por favor, introduzca un nombre de usuario</string>
+    <string name="edit_user_activity_enter_password">Por favor, introduzca una contraseña</string>
+    <string name="edit_user_activity_enter_password_repeat">Por favor, repita la contraseña</string>
+    <string name="edit_user_activity_password_not_match">Las contraseñas no coinciden</string>
+    <string name="edit_user_activity_enter_email">Por favor, introduzca un correco electrónico válido</string>
+    <string name="edit_user_activity_error_updating_user">Error inesperado editando la información del usuario</string>
+    <string name="edit_user_activity_getting_user_data">Descargando datos del usuario</string>
+    <string name="edit_user_activity_sending_user_data">Enviando datos del usuario</string>
+    <string name="edit_user_activity_cannot_get_account_data">Imposible descargar datos del usuario %1$s</string>
+    <string name="auth_fail">Fallo de autenticación, por favor revise las notificaciones para para volver a autenticarse</string>
+    <string name="account_update_success">Actualización de cuenta completada</string>
+    <string name="account_register_success">Registro de cuenta completado</string>
+    <string name="account_update_fail">Fallo en la actualización de la cuenta</string>
+    <string name="message_upload_no_permission">No tienes permisos para subir un mensaje, mensaje borrado&#8230;</string>
+    <string name="create_user_button">Crear usuario</string>
+    <string name="create_user_fail">Fallo en la creación de usuario</string>
+    <string name="error_capturing_media">Error capturando media&#8230;</string>
+    <string name="error_email_registered">Dirección de correo ya usada&#8230;</string>
+    <string name="error_phone_registered">Teléfono ya usado&#8230;</string>
+    <string name="error_invalid_phone">Teléfono incorrecto&#8230;</string>
+    <string name="error_unexpected">Error inesperado</string>
+
+    <!-- Main Menu -->
+    <string name="main_menu_select_account">Seleccionar cuenta</string>
+    <string name="main_menu_preferences">Preferencias</string>
+
+    <!-- Preferences -->
+    <string name="preference_server_protocol">Protocolo del servidor</string>
+    <string name="preference_server_address">Dirección del servidor</string>
+    <string name="preference_server_account">Cuenta</string>
+    <string name="preference_server_port">Puerto del servidor</string>
+    <string name="set_notification">Alertas sonoras</string>
+    <string name="max_messages">Máximo número de mensajes en memoria</string>
+    <string name="media_total_size">Almacén de contenidos (MB)</string>
+    <string name="init_call_with_video">Iniciar con video</string>
+    <string name="init_video_summary_on">La llamada empieza con video</string>
+    <string name="init_video_summary_off">La llamada empieza sin video</string>
+    <string name="default_camera">Cámara por defecto</string>
+    <string name="front_camera">Delantera</string>
+    <string name="back_camera">Trasera</string>
+    <string name="none_camera">No hay cámara</string>
+    <string name="stun_enable">Activar Stun</string>
+    <string name="stun_address">Dirección Stun</string>
+    <string name="stun_port">Puerto Stun</string>
+    <string name="stun_user">Usuario Stun</string>
+    <string name="stun_password">Contraseña Stun</string>
+    <string name="turn_enable">Activar Turn</string>
+    <string name="turn_address">Dirección Turn</string>
+    <string name="turn_port">Puerto Turn</string>
+    <string name="turn_user">Usuario Turn</string>
+    <string name="turn_password">Contraseña Turn</string>
+    <string name="preferences_version">Versión</string>
+    <string name="preferences_build_number">Número de compilación</string>
+
+    <!-- Notification -->
+    <string name="notification_body">Revise sus mensajes</string>
+    <string name="notification_title_single">mensaje</string>
+    <string name="notification_title_plural">mensajes</string>
+    <string name="notification_title_from">de</string>
+    <string name="notification_more_messages">mas</string>
+    <string name="notification_new_messages">nuevos</string>
+
+    <!-- Recovery -->
+    <string name="email_or_name">Correo Electronico/Nombre de usuario</string>
+    <string name="code">Código de recuperación</string>
+    <string name="send_request">Pedir código</string>
+    <string name="send_code">Enviar código</string>
+    <string name="empty_code">Por favor, escriba un código de recuperación correcto</string>
+    <string name="requesting_code">Requesting code&#8230;</string>
+    <string name="sending_code">Enviando código&#8230;</string>
+    <string name="password_update">Contraseña reseteada</string>
+    <string name="password_update_fail">El cambio de contraseña ha fallado, inténtelo de nuevo</string>
+    <string name="checkout_mail">El código fue enviado, revise su correo electrónico</string>
+    <string name="recovery_help"> Por favor, escriba su correo electrónico registrado o nombre de usuario y le enviaremos al correo electrónico la contraseña. Cuando tenga el código, pégela más abajo y escriba la nueva contraseña, haga click en -Mandar código-"</string>
+    <string name="error_requesting_code">Error pidiendo el código, usuario no encontrado</string>
+
+    <!-- Pull To Refresh values -->
+    <string name="pull_to_refresh_pull_label">Desliza el dedo hacia abajo para actualizar.</string>
+    <string name="pull_to_refresh_release_label">Soltar para actualizar…</string>
+    <string name="pull_to_refresh_refreshing_label">Cargando&#8230;</string>
+
+    <!-- Configure groups -->
+    <string name="configure_groups">Configurar Grupos</string>
+    <string name="add_group">Añadir grupo</string>
+    <string name="delete_group">Borrar grupo</string>
+    <string name="delete_group_message">El grupo será borrado, ¿Estás seguro?</string>
+    <string name="exit_group">Dejar group</string>
+    <string name="exit_group_message">Vas a abandonar este grupo, ¿Estás seguro?</string>
+    <string name="create">Crear</string>
+    <string name="create_dialog">Crear nuevo grupo</string>
+    <string name="cancel_group">Cancelar</string>
+    <string name="group_name">Nombre del grupo</string>
+    <string name="group_phone">Teléfono del grupo</string>
+    <string name="users_tab_text">Usuarios</string>
+    <string name="invitations_tab_text">Invitaciones</string>
+    <string name="invitate_user">Invitar usuarios</string>
+    <string name="admin_group">Administrar grupo</string>
+    <string name="upload_group_changes">Subir cambios</string>
+    <string name="upload_group_changes_text">¿Estas seguro de querer subir los cambios?</string>
+    <string name="creating_group">Creando grupo</string>
+    <string name="admin_layer">Admin.</string>
+    <string name="group_delete_error">Error borrando el grupo&#8230;</string>
+    <string name="group_delete_success">Grupo borrado!</string>
+    <string name="group_exit_error">Error saliendo del grupo&#8230;</string>
+    <string name="group_exit_success">Has dejado el grupo!</string>
+    <string name="group_add_admin">Añadir admin</string>
+    <string name="group_admin_success">Administrador añadido!</string>
+    <string name="group_admin_error">Error añadiendo administrador&#8230;</string>
+    <string name="editing_group">Editando grupo&#8230;</string>
+    <string name="editing_group_error">Error editando grupo&#8230;</string>
+    <string name="editing_group_success">Grupo editado!</string>
+    <string name="adding_user">Añadiendo usuarios</string>
+    <string name="adding_user_empty">Seleccione usuarios a añadir&#8230;</string>
+    <string name="adding_user_success">Usuarios añadidos!</string>
+    <string name="adding_user_error">Error añadiendo usuarios&#8230;</string>
+    <string name="creating_group_error">Error creando grupo&#8230;</string>
+    <string name="creating_group_success">Grupo creado!</string>
+    <string name="creating_group_mandatory_name">Añada un nombre al grupo</string>
+    <string name="delete_user">Borrar usuario</string>
+    <string name="delete_user_success">Usuario borrado!</string>
+    <string name="delete_user_error">Error borrando usuario&#8230;</string>
+    <string name="group_cant_delete">No tienes permisos de administración para borrar este grupo&#8230;</string>
+    <string name="group_cant_leave">No puedes dejar este grupo&#8230;</string>
+    <string name="deleting_timeline_error">Error borrando timeline&#8230;</string>
+    <string name="deleting_timeline_success">Timeline borrado!</string>
+    <string name="getting_local_contacts_success">Contactos sincronizados!</string>
+    <string name="sync_contacts">Sincronizar contactos</string>
+    <string name="synchronizing_contacts">Sincronizando contactos...</string>
+    <string name="getting_local_contacts_error">Error sincronizando contactos&#8230;</string>
+    <string name="group_deleted_popup_title">Grupo borrado</string>
+    <string name="group_deleted_popup_message">Este grupo fue borrado desde otro dispositivo</string>
+    <string name="group_remove_admin_popup_title">No eres administrador</string>
+    <string name="group_remove_admin_popup_message">Ya no eres administrador del grupo</string>
+
+    <!-- deny -->
+    <string name="create_group_access_deny">Tu usuario no puede crear grupos</string>
+    <string name="create_user_access_deny">No puedes registrar usuarios</string>
+
+    <!-- Item list messages -->
+    <string name="select_conversation">Seleccione una conversación para añadirla a la pantalla principal</string>
+    <string name="groups_tag">Grupos</string>
+    <string name="users_tag">Usuarios</string>
+
+    <!-- Contextual menu -->
+    <string name="delete">Delete</string>
+    <string name="exit">Exit</string>
+
+    <!-- Masive tests -->
+    <string name="test_plain_message">Número de mensajes de texto</string>
+    <string name="test_media_message">Número de mensajes con media</string>
+    <string name="delay_message">Tiempo entre mensajes (ms)</string>
+    <string name="btn_send_text">Enviar</string>
+
+    <!-- wrong -->
+    <string name="wrong_account">La cuenta no existe</string>
+    <string name="no_connection">No tiene conexión a Internet</string>
+
+    <!-- User actions -->
+    <string name="video_call">Vídeo llamada</string>
+
+    <!-- Activity OutgoingCall -->
+    <string name="outgoing_call">Llamando</string>
+    <string name="outgoing_callee">Desconocido</string>
+    <string name="outgoing_call_error">Error al iniciar la videollamada</string>
+    <string name="outgoing_call_forbidden">Llamada no permitida</string>
+
+    <!-- Activity IncomingCall -->
+    <string name="incoming_call">Llamada entrante</string>
+    <string name="incoming_caller">Desconocido</string>
+
+    <!-- Call error -->
+    <string name="peer_disconnected">La otra parte se ha desconectado</string>
+    <string name="establish_error">Error al iniciar la llamada</string>
+
+    <!-- Call messages -->
+    <string name="call_in_bg_disconnected">La otra llamada ha terminado</string>
+
+    <!-- Edit User -->
+    <string name="edit_user_allow">Edición permitida</string>
+    <string name="log_out">Salir</string>
+    <string name="save_edition">Guardar</string>
+    <string name="log_out_dialog_title">¿Cerrar sesión?</string>
+    <string name="log_out_dialog_message">Vas a cerrar tu sesión</string>
+    <string name="log_out_dialog_button_ok">Ok</string>
+    <string name="log_out_dialog_button_cancel">Cancelar</string>
+    <string name="log_out_toast">Sesión cerrada</string>
+
+    <!-- QoS Service -->
+    <string name="qos_dialog_title">Estado de conexión</string>
+    <string name="qos_dialog_button_text">OK</string>
+    <string name="qos_connection_ok">Conexión OK.</string>
+    <string name="qos_connection_deg">Conexión en modo degradado.</string>
+    <string name="qos_connection_nok">No hay conexión con el servidor.</string>
+
+</resources>

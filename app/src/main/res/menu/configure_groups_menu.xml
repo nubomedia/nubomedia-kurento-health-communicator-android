@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/search"
+          android:title="Search"
+          android:icon="@drawable/ic_action_search"
+          android:showAsAction="collapseActionView|ifRoom"
+          android:actionViewClass="android.widget.SearchView" />
+    <item
+        android:id="@+id/add_group"
+        android:icon="@drawable/ic_timeline_light"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/add_group"/>
+
+</menu>

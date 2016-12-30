@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">KHC</string>
+    <string name="version">${project.version}</string>
+    <string name="build_number">${buildNumber}</string>
+    <string name="health_communicator_version">${project.version}</string>
+    <string name="gcm_sender_id">960033244694</string>
+
+    <!-- notification class open -->
+    <string name="package_to_open">com.kurento.android.sdk.communicator.gui</string>
+    <string name="class_to_open">com.kurento.android.sdk.communicator.gui.ui.activity.TimelineListActivity</string>
+    <string name="account_needed">You need an app account ID to access&#8230;</string>
+    <string name="account_ok">Ok</string>
+    <string name="account_tittle">Select account</string>
+    <string name="re_sync_title">Sync app</string>
+    <string name="re_sync_text">This proccess resync you app, use it only if you have some problems with the app</string>
+    <string name="re_sync_ok">Sync</string>
+    <string name="re_sync_cancel">Cancel</string>
+    <string name="re_sync_error">Error in sync process</string>
+    <string name="get_contacts_title">Get contacts</string>
+    <string name="get_contacts_text">Find users that you have on your device?</string>
+    <string name="get_contacts_ok">Yes</string>
+    <string name="get_contacts_cancel">Cancel</string>
+
+    <!-- Main -->
+    <string name="main_button_take_picture">Take photo</string>
+    <string name="main_button_record_video">Record video</string>
+    <string name="main_button_gsm_call">Call</string>
+    <string name="main_select_account">Select a Group</string>
+    <string name="main_no_account_error_message">An account is needed to run the app</string>
+    <string name="loading_data">Download the data could take some time, but if this process takes more than 5 minutes, please retry it later.</string>
+    <string name="sync_tittle">Synchronize user</string>
+    <string name="sync_text">This process could take some time the first time&#8230;</string>
+    <string name="sync">Synchronize&#8230;</string>
+    <string name="preferences_sync">Sync app</string>
+    <string name="preferences_account">Find users</string>
+    <string name="log">Log</string>
+
+    <!-- Upload -->
+    <string name="upload_preview_description">Preview</string>
+    <string name="upload_description">Description</string>
+    <string name="upload_button_upload">Upload</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="uploading_media">Uploading&#8230;</string>
+    <string name="upload_fail">Upload fail</string>
+    <string name="upload_ok">Done!</string>
+    <string name="upload_offline">No connection&#8230;</string>
+
+    <!-- Timeline list -->
+    <string name="add_timeline">Add timeline</string>
+    <string name="delete_timeline">Delete timeline</string>
+    <string name="agenda_menu">Agenda</string>
+
+    <!-- Messages list activity -->
+    <string name="loading">Loading&#8230;</string>
+    <string name="no_messages">Actually there are no messages, please try it later.</string>
+    <string name="refresh">Refresh</string>
+    <string name="donwload_fail">Downloading error&#8230;</string>
+    <string name="reply">Reply this message</string>
+    <string name="no_refresh_messages">There are no more messages.</string>
+    <string name="timeline_no_enabled">You are not a member of this group, you cannot send messages.</string>
+
+    <!-- Single message activity -->
+    <string name="from_layer_string">From:</string>
+    <string name="to_layer_string">To:</string>
+    <string name="timestamp_layer_string">Date:</string>
+    <string name="body_layer_string">Message:</string>
+    <string name="send_ack_message">Are you sure you want to acknowledge this task?</string>
+    <string name="send_ack_yes">Yes</string>
+    <string name="send_ack_no">No</string>
+    <string name="loading_media">Loading&#8230;</string>
+
+    <!-- popup media -->
+    <string name="select_media">Select media</string>
+    <string name="popup_camera">Picture</string>
+    <string name="popup_vidio">Video</string>
+    <string name="popup_gallery">Gallery</string>
+    <string name="no_media">No media to show</string>
+    <string name="media_attach">Media attached to send</string>
+
+    <!-- popup call -->
+    <string name="popup_call">Phone Call</string>
+    <string name="popup_video_call">Video Call</string>
+
+    <!-- Message status -->
+    <string name="msg_sending">Sending</string>
+    <string name="msg_sent">Sent</string>
+    <string name="msg_received">Received</string>
+    <string name="msg_new">New</string>
+    <string name="msg_readed">Readed</string>
+    <string name="new_message_timeline">(New messages)</string>
+    <string name="test_activity_header">Massive Test</string>
+    <string name="test_message">Testing </string>
+    <string name="message_for_testing">kurento666</string>
+
+    <!-- user values -->
+    <string name="account_preferences">Account preferencecs</string>
+    <string name="account_preferences_edit_account">Edit account</string>
+    <string name="account_preferences_edit_account_summary">Edit your profile</string>
+    <string name="login_activity_username_hint">Email</string>
+    <string name="login_activity_login_btn">Log in</string>
+    <string name="login_activity_register_btn">Don\'t have an account? sign up!</string>
+    <string name="login_activity_recovery_btn">Recovery password</string>
+    <string name="login_activity_fail_bad_username">Please enter a valid username</string>
+    <string name="login_activity_invalid_credentials">Invalid credentials</string>
+    <string name="login_activity_login_fail">Login Failed! don\'t remember password? recover it here&#8230;</string>
+    <string name="login_activity_fail_bad_passwd">Please enter a valid password</string>
+    <string name="login_activity_password_hint">Password</string>
+    <string name="login_activity_logging_in">Logging in</string>
+    <string name="login_activity_checking_account">Checking server</string>
+    <string name="please_wait">Please wait</string>
+    <string name="please_wait_login">Please wait, login could take some time&#8230;</string>
+    <string name="edit_user_activity_username">Username</string>
+    <string name="edit_user_activity_password">Change password</string>
+    <string name="edit_user_activity_repeat_password">Repeat password</string>
+    <string name="edit_user_activity_fullname">FullName</string>
+    <string name="edit_user_activity_name">Name</string>
+    <string name="edit_user_activity_phone">Phone</string>
+    <string name="edit_user_activity_surname">Surname</string>
+    <string name="edit_user_activity_email">E-mail</string>
+    <string name="edit_user_activity_email_no_editable">E-mail (No editable)</string>
+    <string name="edit_user_activity_nickname">NickName</string>
+    <string name="edit_user_activity_upload">Upload</string>
+    <string name="edit_user_activity_telephone">Telephone</string>
+    <string name="edit_user_activity_contact_picture">Contact picture</string>
+    <string name="edit_user_activity_enter_all">Please, enter all data</string>
+    <string name="edit_user_activity_enter_username">Please, enter a username</string>
+    <string name="edit_user_activity_enter_password">Please, enter a password</string>
+    <string name="edit_user_activity_enter_password_repeat">Please, repeat password</string>
+    <string name="edit_user_activity_password_not_match">Password not match</string>
+    <string name="edit_user_activity_enter_email">Please, enter a valid e-mail</string>
+    <string name="edit_user_activity_error_updating_user">Unexpected error updating user information</string>
+    <string name="edit_user_activity_getting_user_data">Getting user data</string>
+    <string name="edit_user_activity_sending_user_data">Sending user data</string>
+    <string name="edit_user_activity_cannot_get_account_data">Cannot get data for user %1$s</string>
+    <string name="auth_fail">Login fail, please check out your notifications to login again</string>
+    <string name="account_register_success">Register account completed</string>
+    <string name="account_update_success">Update account completed</string>
+    <string name="account_update_fail">Update account fail</string>
+    <string name="message_upload_no_permission">No permission to upload the message, message was deleted&#8230;</string>
+    <string name="create_user_button">Create user</string>
+    <string name="create_user_fail">Create user fail</string>
+    <string name="error_capturing_media">Error tryng to get media&#8230;</string>
+    <string name="error_email_registered">Email is already registered&#8230;</string>
+    <string name="error_phone_registered">Phone is already registered&#8230;</string>
+    <string name="error_invalid_phone">Invalid phone number&#8230;</string>
+    <string name="error_unexpected">Unexpected error</string>
+
+    <!-- Main Menu -->
+    <string name="main_menu_select_account">Select account</string>
+    <string name="main_menu_preferences">Preferences</string>
+
+    <!-- Preferences -->
+    <string name="preference_server_protocol">Server protocol</string>
+    <string name="preference_server_address">Server address</string>
+    <string name="preference_server_account">Account</string>
+    <string name="preference_server_port">Server port</string>
+    <string name="set_notification">Retrieve notifications with sounds</string>
+    <string name="max_messages">Max number of message in memory</string>
+    <string name="media_total_size">Content storage size (MB)</string>
+    <string name="init_call_with_video">Init with video</string>
+    <string name="init_video_summary_on">Call starts with video enabled</string>
+    <string name="init_video_summary_off">Call starts with video disabled</string>
+    <string name="default_camera">Default camera</string>
+    <string name="front_camera">Front</string>
+    <string name="back_camera">Back</string>
+    <string name="none_camera">No camera</string>
+    <string name="stun_enable">Enable Stun</string>
+    <string name="stun_address">Stun address</string>
+    <string name="stun_port">Stun port</string>
+    <string name="stun_user">Stun user</string>
+    <string name="stun_password">Stun password</string>
+    <string name="turn_enable">Enable Turn</string>
+    <string name="turn_address">Turn address</string>
+    <string name="turn_port">Turn port</string>
+    <string name="turn_user">Turn user</string>
+    <string name="turn_password">Turn password</string>
+    <string name="preferences_version">Version</string>
+    <string name="preferences_build_number">Build number</string>
+
+    <!-- Notification -->
+    <string name="notification_body">Checkout your messages</string>
+    <string name="notification_title_single">message</string>
+    <string name="notification_title_plural">messages</string>
+    <string name="notification_title_from">from</string>
+    <string name="notification_dots">...</string>
+    <string name="notification_more_messages">more</string>
+    <string name="notification_new_messages">new</string>
+
+    <!-- Recovery -->
+    <string name="email_or_name">E-mail/Username</string>
+    <string name="code">Recovery code</string>
+    <string name="send_request">Request code</string>
+    <string name="send_code">Send Code</string>
+    <string name="empty_code">Please write a correct recovery code</string>
+    <string name="requesting_code">Requesting code&#8230;</string>
+    <string name="sending_code">Sending code&#8230;</string>
+    <string name="password_update">Password updated</string>
+    <string name="password_update_fail">Password updated failure, please try again</string>
+    <string name="checkout_mail">Code was sent, please checkout you email adress, you will see the code soon</string>
+    <string name="recovery_help">* Please enter your registration Email or Username and we will send you a recovery code to you Email. When you have the code please paste it down here and click -Send code-</string>
+    <string name="error_requesting_code">Error requesting code, user not found</string>
+
+    <!-- Pull To Refresh values -->
+    <string name="pull_to_refresh_pull_label">Pull to refresh…</string>
+    <string name="pull_to_refresh_release_label">Release to refresh…</string>
+    <string name="pull_to_refresh_refreshing_label">Loading&#8230;</string>
+
+    <!-- Configure groups -->
+    <string name="configure_groups">Configure Groups</string>
+    <string name="add_group">Add group</string>
+    <string name="delete_group">Delete group</string>
+    <string name="delete_group_message">You will delete this group, are you sure?</string>
+    <string name="exit_group">Exit group</string>
+    <string name="exit_group_message">You will leave this group, are you sure?</string>
+    <string name="create">Create</string>
+    <string name="create_dialog">Create new group</string>
+    <string name="cancel_group">Cancel</string>
+    <string name="group_name">Group name</string>
+    <string name="group_phone">Group phone</string>
+    <string name="users_tab_text">Users</string>
+    <string name="invitations_tab_text">Invitations</string>
+    <string name="invitate_user">Invitate users</string>
+    <string name="admin_group">Admin group</string>
+    <string name="upload_group_changes">Upload</string>
+    <string name="upload_group_changes_text">Are you sure about upload the changes?</string>
+    <string name="creating_group">Creating group</string>
+    <string name="searching_users">Searching users</string>
+    <string name="admin_layer">Admin</string>
+    <string name="group_delete_error">Error deleting group&#8230;</string>
+    <string name="group_delete_success">Group deleted!</string>
+    <string name="group_exit_error">Error leaving group&#8230;</string>
+    <string name="group_exit_success">Group exited!</string>
+    <string name="group_add_admin">Add admin</string>
+    <string name="group_admin_success">Admin added!</string>
+    <string name="group_admin_error">Error adding adming&#8230;</string>
+    <string name="group_remove_admin_success">Admin removed!</string>
+    <string name="group_remove_admin_error">Error removing adming&#8230;</string>
+    <string name="editing_group">Editing group&#8230;</string>
+    <string name="editing_group_error">Error editing group&#8230;</string>
+    <string name="editing_group_success">Group edited!</string>
+    <string name="adding_user">Adding user to group</string>
+    <string name="adding_user_empty">No users to add&#8230;</string>
+    <string name="adding_user_success">User added!</string>
+    <string name="adding_user_error">Error adding user&#8230;</string>
+    <string name="creating_group_error">Error creating group&#8230;</string>
+    <string name="creating_group_success">Group created!</string>
+    <string name="creating_group_mandatory_name">Please type a name for the group</string>
+    <string name="delete_user">Deleting user</string>
+    <string name="delete_user_success">User deleted!</string>
+    <string name="delete_user_error">Error deleting user&#8230;</string>
+    <string name="group_cant_delete">You do not have admin status to delete this group&#8230;</string>
+    <string name="group_cant_leave">You can not leave this group&#8230;</string>
+    <string name="deleting_timeline_error">Error deleting timeline&#8230;</string>
+    <string name="deleting_timeline_success">Timeline deleted!</string>
+    <string name="getting_local_contacts_success">Contacts was synchronized!</string>
+    <string name="sync_contacts">Synchronize contacts</string>
+    <string name="synchronizing_contacts">Synchronizing contacts...</string>
+    <string name="getting_local_contacts_error">Error synchronizing contacts&#8230;</string>
+    <string name="group_deleted_popup_title">Group was deleted</string>
+    <string name="group_deleted_popup_message">This group was deleted from another device</string>
+    <string name="group_remove_admin_popup_title">Not group admin</string>
+    <string name="group_remove_admin_popup_message">You are not already an admin</string>
+
+    <!-- deny -->
+    <string name="create_group_access_deny">Your user can not create a group</string>
+    <string name="create_user_access_deny">You can not create a users</string>
+
+    <!-- Item list -->
+    <string name="select_conversation">Select a conversation to be added in main screen</string>
+    <string name="groups_tag">Groups</string>
+    <string name="users_tag">Users</string>
+
+    <!-- Contextual menu -->
+    <string name="delete">Delete</string>
+    <string name="exit">Exit</string>
+    <string name="call_menu">Call menu</string>
+
+    <!-- Masive tests -->
+    <string name="test_plain_message">Number of plane messages</string>
+    <string name="test_media_message">Number of media messages</string>
+    <string name="delay_message">Send messages delay (ms)</string>
+    <string name="btn_send_text">Send</string>
+
+    <!-- wrong -->
+    <string name="wrong_account">This account does not exist</string>
+    <string name="no_connection">No Internet connection available</string>
+
+    <!-- Edit User -->
+    <string name="edit_user_allow">Editing allowed</string>
+    <string name="log_out">Log out</string>
+    <string name="save_edition">Save</string>
+    <string name="log_out_dialog_title">Log out?</string>
+    <string name="log_out_dialog_message">You are going to logout the app</string>
+    <string name="log_out_dialog_button_ok">Ok</string>
+    <string name="log_out_dialog_button_cancel">Cancel</string>
+    <string name="log_out_toast">Logged out</string>
+
+    <!-- User actions -->
+    <string name="video_call">Video call</string>
+
+    <!-- Activity OutgoingCall -->
+    <string name="outgoing_call">Calling</string>
+    <string name="outgoing_callee">Unknown</string>
+    <string name="outgoing_call_error">Failed to init videocall</string>
+    <string name="outgoing_call_forbidden">Forbidden call</string>
+
+    <!-- Activity IncomingCall -->
+    <string name="incoming_call">Incoming call</string>
+    <string name="incoming_caller">Unknown</string>
+
+    <!-- Call error -->
+    <string name="peer_disconnected">Peer disconnected</string>
+    <string name="establish_error">Failed to establish call</string>
+
+    <!-- Call messages -->
+    <string name="call_in_bg_disconnected">The other call has ended</string>
+
+    <!-- Activity VideoCall -->
+    <string name="call_to">Call</string>
+    <string name="call_switch">Switch</string>
+    <string name="call_forward">Forward</string>
+    <string name="call_wait_title">Call wait</string>
+    <string name="call_wait_message">Call waiting</string>
+    <string name="call_no_contact_selected">No contact selected</string>
+    <string name="call_more_than_two">You cannot make more than 2 calls simultaneously</string>
+    <string name="call_switch_one">You have just one current call</string>
+    <string name="call_forward_not_two">You do not have two calls to make call forwarding</string>
+    <string name="call_forward_wait_to_complete">Waiting to establish the call forwarding</string>
+
+    <!-- Popup call to-->
+    <string name="popup_call_to_title">Call to:</string>
+    <string name="popup_call_button">Call</string>
+    <string name="popup_call_cancel_button">Cancel</string>
+
+    <!-- QoS Service -->
+    <string name="qos_dialog_title">Connection Status</string>
+    <string name="qos_dialog_title_conn_nok">Connection Error</string>
+    <string name="qos_dialog_button_text">OK</string>
+    <string name="qos_connection_ok">Connection is OK.</string>
+    <string name="qos_connection_deg">Connection is in degraded mode.</string>
+    <string name="qos_connection_nok">There is no connection with the server.</string>
+
+    <!-- popup call -->
+    <string name="popup_call_error">Phone number not available</string>
+
+</resources>

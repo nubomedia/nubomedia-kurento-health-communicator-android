@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:id="@+id/value"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/top_data_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dip"
+            android:orientation="horizontal"
+            android:paddingBottom="4dip"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:paddingTop="4dip" >
+
+            <TextView
+                android:id="@+id/from_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:text="hello"
+                android:textSize="16dip"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/timestamp_text"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toRightOf="@id/from_text"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="right|center"
+                android:text="bye"
+                android:textSize="9dip" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dip"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/body_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/avatar"
+                android:paddingLeft="16dip"
+                android:paddingRight="16dip"
+                android:textSize="16dip"
+                android:textStyle="italic" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dip"
+            android:layout_marginLeft="16dip"
+            android:layout_marginRight="16dip"
+            android:gravity="center|top"
+            android:orientation="horizontal"
+            android:paddingTop="20dip" >
+
+            <ImageButton
+                android:id="@+id/open_media_button"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:background="@android:drawable/editbox_background_normal"
+                android:src="@android:drawable/ic_menu_view" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

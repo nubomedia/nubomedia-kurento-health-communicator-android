@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <EditText
+        android:layout_width="0dip"
+        android:layout_height="0dip" >
+
+        <requestFocus />
+    </EditText>
+
+    <ImageView
+        android:id="@+id/bg_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.3" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dip" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/user_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#33000000" />
+    </RelativeLayout>
+
+</RelativeLayout>

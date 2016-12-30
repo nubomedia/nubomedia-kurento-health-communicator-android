@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="message_avatar">32dip</dimen>
+    <dimen name="media_thumnail">96dip</dimen>
+    <dimen name="media_cancel_button">32dip</dimen>
+    <dimen name="media_type_icon">16dip</dimen>
+    <dimen name="media_loading_progressbar">48dip</dimen>
+    <dimen name="message_margin">32dip</dimen>
+    <dimen name="message_from">18dip</dimen>
+    <dimen name="timeline_new_status">32dip</dimen>
+    <dimen name="message_status_icon">16dip</dimen>
+
+</resources>

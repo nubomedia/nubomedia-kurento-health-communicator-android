@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@android:drawable/picture_frame"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dip"
+        android:layout_marginTop="8dip"
+        android:paddingLeft="16dip"
+        android:text="@string/create_dialog"
+        android:textColor="@android:color/holo_blue_light"
+        android:textSize="18dip"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dip"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dip"
+        android:layout_marginTop="4dip"
+        android:background="@android:color/holo_blue_light" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dip" >
+
+        <ImageView
+            android:id="@+id/group_image"
+            android:layout_width="90dip"
+            android:layout_height="90dip"
+            android:layout_gravity="center"
+            android:layout_marginRight="8dip"
+            android:background="@android:color/darker_gray" />
+
+        <EditText
+            android:id="@+id/group_phone_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/group_name_text"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/group_image"
+            android:gravity="center"
+            android:hint="@string/group_phone"
+            android:inputType="phone"
+            android:text="" />
+
+        <EditText
+            android:id="@+id/group_name_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/group_image"
+            android:gravity="center"
+            android:hint="@string/group_name" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dip"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/create_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/create" />
+
+        <FrameLayout
+            android:layout_width="1dip"
+            android:layout_height="50dip"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="@string/cancel_group" />
+    </LinearLayout>
+
+</LinearLayout>

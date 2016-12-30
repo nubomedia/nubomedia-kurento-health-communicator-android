@@ -1,0 +1,57 @@
+// Licensed to the Apache Software Foundation (ASF) under one
+// or more contributor license agreements.  See the NOTICE file
+// distributed with this work for additional information
+// regarding copyright ownership.  The ASF licenses this file
+// to you under the Apache License, Version 2.0 (the
+// "License"); you may not use this file except in compliance
+// with the License.  You may obtain a copy of the License at
+//
+// http://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing,
+// software distributed under the License is distributed on an
+// "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+// KIND, either express or implied.  See the License for the
+// specific language governing permissions and limitations
+// under the License.
+
+package eu.nubomedia.nubomedia_kurento_health_communicator_android.kc_and_communicator.util;
+
+import com.kurento.agenda.datamodel.pojo.KhcInvalidDataInfo;
+
+public class InvalidDataException extends Exception {
+
+	private static final long serialVersionUID = 2582770198723955839L;
+
+	private KhcInvalidDataInfo info;
+
+	public InvalidDataException() {
+		super();
+	}
+
+	public InvalidDataException(KhcInvalidDataInfo info) {
+		super();
+		this.info = info;
+	}
+
+	public KhcInvalidDataInfo getInfo() {
+		return info;
+	}
+
+	public void setInfo(KhcInvalidDataInfo info) {
+		this.info = info;
+	}
+
+	public InvalidDataException(String detailMessage) {
+		super(detailMessage);
+	}
+
+	public InvalidDataException(String detailMessage, Throwable throwable) {
+		super(detailMessage, throwable);
+	}
+
+	public InvalidDataException(Throwable throwable) {
+		super(throwable);
+	}
+
+}

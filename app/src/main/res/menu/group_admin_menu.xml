@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/invitate_user"
+        android:icon="@drawable/add_user_light"
+        android:showAsAction="ifRoom|withText"
+        android:title="@string/invitate_user"/>
+    <item
+        android:id="@+id/exit_group"
+        android:icon="@drawable/ic_leave_light"
+        android:showAsAction="always"
+        android:title="@string/exit"/>
+    <item
+        android:id="@+id/delete_group"
+        android:icon="@drawable/ic_delete_light"
+        android:showAsAction="always"
+        android:title="@string/delete"/>
+
+</menu>

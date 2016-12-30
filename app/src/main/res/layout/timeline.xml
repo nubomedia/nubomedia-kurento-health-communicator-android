@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_activity_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#eeeeee" >
+
+    <ImageView
+        android:id="@+id/bg_screen"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.3" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <eu.nubomedia.nubomedia_kurento_health_communicator_android.kc_and_communicator.ui.util.PullToRefreshLayout
+            android:id="@+id/ptr_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/separator_layer" >
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@null"
+                android:dividerHeight="4dp"
+                android:paddingTop="4dip" >
+            </ListView>
+        </eu.nubomedia.nubomedia_kurento_health_communicator_android.kc_and_communicator.ui.util.PullToRefreshLayout>
+
+        <ImageView
+            android:id="@+id/update_bottom"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_above="@id/input_layer"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_arrow"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/input_layer"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:background="#ffffff" >
+
+            <ImageButton
+                android:id="@+id/media_button"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentLeft="true"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+            <ImageButton
+                android:id="@+id/send_button"
+                android:layout_width="50dip"
+                android:layout_height="50dip"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:src="@android:drawable/ic_menu_send" />
+
+            <EditText
+                android:id="@+id/upload_description_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_toLeftOf="@id/send_button"
+                android:layout_toRightOf="@id/media_button" >
+
+                <requestFocus />
+            </EditText>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/separator_layer"
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:layout_above="@id/input_layer"
+            android:background="@android:color/darker_gray" />
+
+        <RelativeLayout
+            android:id="@+id/atach_layer"
+            android:layout_width="fill_parent"
+            android:layout_height="20dip"
+            android:layout_above="@id/separator_layer"
+            android:background="@color/green"
+            android:visibility="gone" >
+
+            <ImageView
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="4dip"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+            <TextView
+                android:id="@+id/attach_textview"
+                android:layout_width="fill_parent"
+                android:layout_height="20dip"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="26dip"
+                android:gravity="center|left"
+                android:text="@string/media_attach" />
+
+            <ImageView
+                android:id="@+id/attach_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@android:drawable/ic_delete" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#66000000"
+        android:padding="8dip"
+        android:textColor="#ffffff"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/enabledMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#66000000"
+        android:padding="8dip"
+        android:textColor="#ffffff"
+        android:textSize="15dip"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+</RelativeLayout>

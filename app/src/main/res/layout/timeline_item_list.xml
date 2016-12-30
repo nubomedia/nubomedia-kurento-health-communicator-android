@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="70dip" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dip"
+        android:background="@android:drawable/picture_frame" >
+
+        <RelativeLayout
+            android:id="@+id/timeline_new_right"
+            android:layout_width="6dip"
+            android:layout_height="64dip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="4dip" />
+
+        <RelativeLayout
+            android:id="@+id/timeline_new_left"
+            android:layout_width="6dip"
+            android:layout_height="64dip"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="4dip" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_toRightOf="@+id/timeline_type_image"
+            android:orientation="vertical"
+            android:paddingRight="18dip" >
+
+            <RelativeLayout
+                android:id="@+id/first_line"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/timeline_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/timeline_status"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip"
+                    android:textSize="20dip" />
+
+                <TextView
+                    android:id="@+id/timeline_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:textSize="13dip" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/second_line"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <TextView
+                    android:id="@+id/timeline_last_message_body"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/timeline_new_icon"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="16dip"
+                    android:paddingRight="16dip"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="16dip" />
+
+                <ImageView
+                    android:id="@+id/timeline_new_icon"
+                    android:layout_width="@dimen/timeline_new_status"
+                    android:layout_height="@dimen/timeline_new_status"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_new_message" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/timeline_type_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:paddingLeft="16dip"
+            android:src="@drawable/ic_group" />
+    </RelativeLayout>
+
+</RelativeLayout>
