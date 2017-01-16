@@ -94,7 +94,7 @@ public class RegisterUserActivity extends AnalyticsBaseActivity {
 		((ImageView) this.findViewById(R.id.bg_screen))
 				.setBackgroundDrawable(new BitmapDrawable(getResources(),
 						BitmapFactory.decodeStream(getResources()
-								.openRawResource(R.drawable.bg))));
+								.openRawResource(+ R.drawable.bg))));
 
 		// change values from edit user to create one
 		findViewById(R.id.password_layer).setVisibility(View.VISIBLE);

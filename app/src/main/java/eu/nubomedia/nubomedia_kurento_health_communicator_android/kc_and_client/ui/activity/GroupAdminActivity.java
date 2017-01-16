@@ -120,7 +120,7 @@ public class GroupAdminActivity extends AnalyticsBaseActivity {
 		((ImageView) this.findViewById(R.id.bg_screen))
 				.setBackgroundDrawable(new BitmapDrawable(getResources(),
 						BitmapFactory.decodeStream(getResources()
-								.openRawResource(R.drawable.bg))));
+								.openRawResource(+ R.drawable.bg))));
 
 		getActionBar().setIcon(R.drawable.ic_edit_light);
 		setTitle(getString(R.string.admin_group));

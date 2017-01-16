@@ -97,7 +97,7 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
 		((ImageView) this.findViewById(R.id.bg_screen))
 				.setBackgroundDrawable(new BitmapDrawable(getResources(),
 						BitmapFactory.decodeStream(getResources()
-								.openRawResource(R.drawable.bg))));
+								.openRawResource(+ R.drawable.bg))));
 
 		usernameEdit = (EditText) findViewById(R.id.username);
 		passwordEdit = (EditText) findViewById(R.id.passwd);

@@ -111,7 +111,7 @@ public class EditUserActivity extends AnalyticsBaseActivity {
 		((ImageView) this.findViewById(R.id.bg_screen))
 				.setBackgroundDrawable(new BitmapDrawable(getResources(),
 						BitmapFactory.decodeStream(getResources()
-								.openRawResource(R.drawable.bg))));
+								.openRawResource(+ R.drawable.bg))));
 
 		Button showPassword = (Button) this.findViewById(R.id.password_button);
 		showPassword.setOnClickListener(new OnClickListener() {

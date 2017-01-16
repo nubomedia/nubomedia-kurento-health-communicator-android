@@ -139,7 +139,7 @@ public class MessagesActivity extends AnalyticsBaseActivity {
 		((ImageView) findViewById(R.id.bg_screen))
 				.setBackgroundDrawable(new BitmapDrawable(getResources(),
 						BitmapFactory.decodeStream(getResources()
-								.openRawResource(R.drawable.bg))));
+								.openRawResource(+ R.drawable.bg))));
 
 		timeline = (TimelineObject) getIntent().getSerializableExtra(
 				ConstantKeys.TIMELINE);

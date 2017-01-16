@@ -222,7 +222,7 @@ public class Preferences extends PreferenceActivity {
 			maxMessageText.setTitle(getString(R.string.max_messages));
 			maxMessageText.getEditText().setInputType(
 					InputType.TYPE_CLASS_NUMBER);
-			maxMessageText.setDefaultValue(getString(R.integer.max_messages));
+			maxMessageText.setDefaultValue(String.valueOf(getResources().getInteger(R.integer.max_messages)));
 			root.addPreference(maxMessageText);
 		}
 
@@ -233,7 +233,7 @@ public class Preferences extends PreferenceActivity {
 			mediaTotalSizeText.getEditText().setInputType(
 					InputType.TYPE_CLASS_NUMBER);
 			mediaTotalSizeText
-					.setDefaultValue(getString(R.integer.media_total_size));
+					.setDefaultValue(String.valueOf(getResources().getInteger(R.integer.media_total_size)));
 			root.addPreference(mediaTotalSizeText);
 		}
 
@@ -559,10 +559,10 @@ public class Preferences extends PreferenceActivity {
 				.getDefaultSharedPreferences(context);
 
 		String toReturn = pref.getString(MEDIA_TOTAL_SIZE,
-				context.getString(R.integer.media_total_size)).trim();
+				String.valueOf(context.getResources().getInteger(R.integer.media_total_size))).trim();
 
 		if (ConstantKeys.STRING_DEFAULT.equals(toReturn)) {
-			toReturn = context.getString(R.integer.media_total_size);
+			toReturn = String.valueOf(context.getResources().getInteger(R.integer.media_total_size));
 		}
 		return toReturn;
 	}
@@ -572,10 +572,10 @@ public class Preferences extends PreferenceActivity {
 				.getDefaultSharedPreferences(context);
 
 		String toReturn = pref.getString(MAX_MESSAGES,
-				context.getString(R.integer.max_messages)).trim();
+				String.valueOf(context.getResources().getInteger(R.integer.max_messages))).trim();
 
 		if (ConstantKeys.STRING_DEFAULT.equals(toReturn)) {
-			toReturn = context.getString(R.integer.max_messages);
+			toReturn = String.valueOf(context.getResources().getInteger(R.integer.max_messages));
 		}
 		return toReturn;
 	}
