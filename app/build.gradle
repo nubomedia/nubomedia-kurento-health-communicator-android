@@ -22,14 +22,18 @@ android {
     packagingOptions {
         exclude 'META-INF/ASL2.0'
     }
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
 }
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'org.slf4j:slf4j-api:1.7.6'
-    compile 'fi.vtt.nubomedia:kurento-room-client-android:1.0.16'
-    compile 'fi.vtt.nubomedia:webrtcpeer-android:1.0.11'
+    compile 'fi.vtt.nubomedia:kurento-room-client-android:1.1.2'
+    compile 'fi.vtt.nubomedia:webrtcpeer-android:1.1.1'
     compile 'org.apache.httpcomponents:httpmime:4.2.4'
     compile 'org.apache.httpcomponents:httpclient:4.3.2'
     compile 'com.google.code.gson:gson:2.2.4'

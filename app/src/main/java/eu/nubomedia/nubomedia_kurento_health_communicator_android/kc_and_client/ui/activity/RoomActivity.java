@@ -76,7 +76,7 @@ public class RoomActivity extends AnalyticsBaseActivity implements RoomListener,
     public static String EXTRA_ROOM_NAME = "RoomNameExtra";
 
     private String username, roomname;
-    private String wsUri = "wss://w4d2cb20f.apps.nubomedia-paas.eu:443/room";
+    private String wsUri = "wss://q630f3c9c.apps.nubomedia-paas.eu:443/room";
 
     private LooperExecutor executor;
     private static KurentoRoomAPI kurentoRoomAPI;
@@ -145,7 +145,6 @@ public class RoomActivity extends AnalyticsBaseActivity implements RoomListener,
                 NBMMediaConfiguration.NBMVideoCodec.VP8, 0,
                 receiverVideoFormat,
                 NBMMediaConfiguration.NBMCameraPosition.FRONT);
-
 
         nbmWebRTCPeer = new NBMWebRTCPeer(peerConnectionParameters, RoomActivity.this, localPeer.getPeerViewRenderer(), RoomActivity.this);
         nbmWebRTCPeer.initialize();
@@ -218,7 +217,6 @@ public class RoomActivity extends AnalyticsBaseActivity implements RoomListener,
 
         kurentoRoomAPI.disconnectWebSocket();
         kurentoRoomAPI = null;
-
 
         unregisterReceiver(mBLEReceiver);
         if (bleManager != null) {
@@ -370,7 +368,6 @@ public class RoomActivity extends AnalyticsBaseActivity implements RoomListener,
 
                 selectedPeer = localPeer;
             }
-
         }
 
         if(notification.getMethod().equals("participantPublished")) {
@@ -406,6 +403,17 @@ public class RoomActivity extends AnalyticsBaseActivity implements RoomListener,
 
     @Override
     public void onInitialize() {
+        try {
+            CertificateFactory cf = CertificateFactory.getInstance("X.509");
+            InputStream caInput = new BufferedInputStream(getAssets().open("certificate.cer"));
+            Certificate ca = cf.generateCertificate(caInput);
+            kurentoRoomAPI.addTrustedCertificate("ca", ca);
+        } catch (CertificateException|IOException e) {
+            Log.e("Error", "Certificate error: " + e.toString());
+        }
+
+        kurentoRoomAPI.useSelfSignedCertificate(true);
+
         if (!kurentoRoomAPI.isWebSocketConnected()) {
             kurentoRoomAPI.connectWebSocket();
         }
@@ -433,7 +441,7 @@ public class RoomActivity extends AnalyticsBaseActivity implements RoomListener,
 
             if (kurentoRoomAPI != null) {
                 String sender = connection.getConnectionId() + "_webcam";
-                kurentoRoomAPI.sendReceiveVideoFrom(sender, remoteSdp.description, constant);
+                kurentoRoomAPI.sendReceiveVideoFrom(sender, connection.getConnectionId(), remoteSdp.description, constant);
             }
         }
     }
