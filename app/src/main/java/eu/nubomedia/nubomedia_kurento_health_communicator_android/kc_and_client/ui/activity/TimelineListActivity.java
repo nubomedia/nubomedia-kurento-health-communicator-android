@@ -41,6 +41,7 @@ import eu.nubomedia.nubomedia_kurento_health_communicator_android.kc_and_communi
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import android.Manifest;
 import android.accounts.Account;
 import android.accounts.AccountManager;
 import android.app.AlertDialog;
@@ -49,9 +50,11 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.format.DateUtils;
 import android.view.Menu;
@@ -92,6 +95,9 @@ public class TimelineListActivity extends AnalyticsBaseActivity {
 
 	protected static boolean isAuthenticatorDisplayed = false;
 
+	private static final int REQUEST_CODE = 123;
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -106,21 +112,98 @@ public class TimelineListActivity extends AnalyticsBaseActivity {
 
 		timelineListActivity = this;
 
-		Long timelineId = (Long)getIntent().getSerializableExtra(
-				ConstantKeys.NOTIFICATION);
+		if (Build.VERSION.SDK_INT >= 23) {
+			if (TimelineListActivity.this.checkSelfPermission(Manifest.permission.READ_CONTACTS)
+							== PackageManager.PERMISSION_GRANTED &&
+					TimelineListActivity.this.checkSelfPermission(Manifest.permission.WRITE_CONTACTS)
+							== PackageManager.PERMISSION_GRANTED &&
+					TimelineListActivity.this.checkSelfPermission(Manifest.permission.GET_ACCOUNTS)
+							== PackageManager.PERMISSION_GRANTED &&
+					TimelineListActivity.this.checkSelfPermission(Manifest.permission.CAMERA)
+							== PackageManager.PERMISSION_GRANTED &&
+					TimelineListActivity.this.checkSelfPermission(Manifest.permission.RECORD_AUDIO)
+							== PackageManager.PERMISSION_GRANTED &&
+					TimelineListActivity.this.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+							== PackageManager.PERMISSION_GRANTED &&
+					TimelineListActivity.this.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+							== PackageManager.PERMISSION_GRANTED) {
 
-		TimelineObject timeline = DataBasesAccess.getInstance(this).TimelinesDataBaseReadTimelineIdSelected(timelineId);
+				Long timelineId = (Long)getIntent().getSerializableExtra(
+						ConstantKeys.NOTIFICATION);
 
-		if (timeline != null) {
-			Class<?> className = AppUtils.getClassByName(timelineListActivity,
-					R.string.messages_activity_package);
-			Intent i = new Intent();
-			if (className != null)
-				i.setClass(timelineListActivity, className);
-			else
-				i.setClass(timelineListActivity, MessagesActivity.class);
-			i.putExtra(ConstantKeys.TIMELINE, timeline);
-			timelineListActivity.startActivity(i);
+				TimelineObject timeline = DataBasesAccess.getInstance(this).TimelinesDataBaseReadTimelineIdSelected(timelineId);
+
+				if (timeline != null) {
+					Class<?> className = AppUtils.getClassByName(timelineListActivity,
+							R.string.messages_activity_package);
+					Intent i = new Intent();
+					if (className != null)
+						i.setClass(timelineListActivity, className);
+					else
+						i.setClass(timelineListActivity, MessagesActivity.class);
+					i.putExtra(ConstantKeys.TIMELINE, timeline);
+					timelineListActivity.startActivity(i);
+				}
+
+			} else {
+				requestPermissions(new String[]{Manifest.permission.READ_CONTACTS,
+								Manifest.permission.WRITE_CONTACTS,
+								Manifest.permission.GET_ACCOUNTS,
+								Manifest.permission.CAMERA,
+								Manifest.permission.RECORD_AUDIO,
+								Manifest.permission.READ_EXTERNAL_STORAGE,
+								Manifest.permission.WRITE_EXTERNAL_STORAGE},
+						REQUEST_CODE);
+			}
+		} else { //permission is automatically granted on sdk<23 upon installation
+
+			Long timelineId = (Long)getIntent().getSerializableExtra(
+					ConstantKeys.NOTIFICATION);
+
+			TimelineObject timeline = DataBasesAccess.getInstance(this).TimelinesDataBaseReadTimelineIdSelected(timelineId);
+
+			if (timeline != null) {
+				Class<?> className = AppUtils.getClassByName(timelineListActivity,
+						R.string.messages_activity_package);
+				Intent i = new Intent();
+				if (className != null)
+					i.setClass(timelineListActivity, className);
+				else
+					i.setClass(timelineListActivity, MessagesActivity.class);
+				i.putExtra(ConstantKeys.TIMELINE, timeline);
+				timelineListActivity.startActivity(i);
+			}
+		}
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+		if(requestCode == REQUEST_CODE &&
+				grantResults[0]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[1]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[2]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[3]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[4]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[5]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[6]== PackageManager.PERMISSION_GRANTED){
+
+			Long timelineId = (Long)getIntent().getSerializableExtra(
+					ConstantKeys.NOTIFICATION);
+
+			TimelineObject timeline = DataBasesAccess.getInstance(this).TimelinesDataBaseReadTimelineIdSelected(timelineId);
+
+			if (timeline != null) {
+				Class<?> className = AppUtils.getClassByName(timelineListActivity,
+						R.string.messages_activity_package);
+				Intent i = new Intent();
+				if (className != null)
+					i.setClass(timelineListActivity, className);
+				else
+					i.setClass(timelineListActivity, MessagesActivity.class);
+				i.putExtra(ConstantKeys.TIMELINE, timeline);
+				timelineListActivity.startActivity(i);
+			}
 		}
 	}
 

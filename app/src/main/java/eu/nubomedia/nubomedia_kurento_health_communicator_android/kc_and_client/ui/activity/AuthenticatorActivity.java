@@ -30,6 +30,7 @@ import eu.nubomedia.nubomedia_kurento_health_communicator_android.kc_and_communi
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import android.Manifest;
 import android.accounts.Account;
 import android.accounts.AccountAuthenticatorActivity;
 import android.accounts.AccountManager;
@@ -39,9 +40,11 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.pm.PackageManager;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.view.KeyEvent;
@@ -89,6 +92,8 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
 	private InputMethodManager imm;
 	private AccountReadInfoResponse accountResponse;
 
+	private static final int REQUEST_CODE = 0123;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -103,22 +108,91 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity {
 		passwordEdit = (EditText) findViewById(R.id.passwd);
 		messageTextView = (TextView) findViewById(R.id.message);
 
-		String username = getIntent().getStringExtra(PARAM_USERNAME);
-		if (username != null) {
-			usernameEdit.setEnabled(false);
-			usernameEdit.setText(username);
-
-			Button button = (Button) findViewById(R.id.login);
-			((LayoutParams) button.getLayoutParams()).weight = 0;
-		} else {
-			AppUtils.purgeApp(this);
-		}
-
-		updateCredentials = username != null;
 		myAnimationDown = AnimationUtils.loadAnimation(getApplicationContext(),
 				R.anim.slide_down);
 		dialog = (LinearLayout) findViewById(R.id.includer);
 		dialogBackground = (RelativeLayout) findViewById(R.id.dialog_background);
+
+		if (Build.VERSION.SDK_INT >= 23) {
+			if (AuthenticatorActivity.this.checkSelfPermission(Manifest.permission.READ_CONTACTS)
+					== PackageManager.PERMISSION_GRANTED &&
+					AuthenticatorActivity.this.checkSelfPermission(Manifest.permission.WRITE_CONTACTS)
+							== PackageManager.PERMISSION_GRANTED &&
+					AuthenticatorActivity.this.checkSelfPermission(Manifest.permission.GET_ACCOUNTS)
+							== PackageManager.PERMISSION_GRANTED &&
+					AuthenticatorActivity.this.checkSelfPermission(Manifest.permission.CAMERA)
+							== PackageManager.PERMISSION_GRANTED &&
+					AuthenticatorActivity.this.checkSelfPermission(Manifest.permission.RECORD_AUDIO)
+							== PackageManager.PERMISSION_GRANTED &&
+					AuthenticatorActivity.this.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
+							== PackageManager.PERMISSION_GRANTED &&
+					AuthenticatorActivity.this.checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
+							== PackageManager.PERMISSION_GRANTED) {
+
+				String username = getIntent().getStringExtra(PARAM_USERNAME);
+				if (username != null) {
+					usernameEdit.setEnabled(false);
+					usernameEdit.setText(username);
+
+					Button button = (Button) findViewById(R.id.login);
+					((LayoutParams) button.getLayoutParams()).weight = 0;
+				} else {
+					AppUtils.purgeApp(this);
+				}
+
+				updateCredentials = username != null;
+
+			} else {
+				requestPermissions(new String[]{Manifest.permission.READ_CONTACTS,
+								Manifest.permission.WRITE_CONTACTS,
+								Manifest.permission.GET_ACCOUNTS,
+								Manifest.permission.CAMERA,
+								Manifest.permission.RECORD_AUDIO,
+								Manifest.permission.READ_EXTERNAL_STORAGE,
+								Manifest.permission.WRITE_EXTERNAL_STORAGE},
+						REQUEST_CODE);
+			}
+		} else { //permission is automatically granted on sdk<23 upon installation
+			String username = getIntent().getStringExtra(PARAM_USERNAME);
+			if (username != null) {
+				usernameEdit.setEnabled(false);
+				usernameEdit.setText(username);
+
+				Button button = (Button) findViewById(R.id.login);
+				((LayoutParams) button.getLayoutParams()).weight = 0;
+			} else {
+				AppUtils.purgeApp(this);
+			}
+
+			updateCredentials = username != null;
+		}
+	}
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+		if(requestCode == REQUEST_CODE &&
+				grantResults[0]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[1]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[2]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[3]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[4]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[5]== PackageManager.PERMISSION_GRANTED &&
+				grantResults[6]== PackageManager.PERMISSION_GRANTED){
+
+			String username = getIntent().getStringExtra(PARAM_USERNAME);
+			if (username != null) {
+				usernameEdit.setEnabled(false);
+				usernameEdit.setText(username);
+
+				Button button = (Button) findViewById(R.id.login);
+				((LayoutParams) button.getLayoutParams()).weight = 0;
+			} else {
+				AppUtils.purgeApp(this);
+			}
+
+			updateCredentials = username != null;
+		}
 	}
 
 	@Override

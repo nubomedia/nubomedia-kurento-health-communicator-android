@@ -76,7 +76,7 @@ public class RoomActivity extends AnalyticsBaseActivity implements RoomListener,
     public static String EXTRA_ROOM_NAME = "RoomNameExtra";
 
     private String username, roomname;
-    private String wsUri = "wss://q630f3c9c.apps.nubomedia-paas.eu:443/room";
+    private String wsUri = "wss://n85218f0a.apps.nubomedia-paas.eu:443/room";
 
     private LooperExecutor executor;
     private static KurentoRoomAPI kurentoRoomAPI;

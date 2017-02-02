@@ -62,6 +62,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Build;
 import android.os.Handler;
 import android.os.SystemClock;
 import android.support.v4.app.ActivityCompat;
@@ -128,6 +129,8 @@ public class MessagesActivity extends AnalyticsBaseActivity {
 	public Account account;
 
 	protected MessagesActivity messagesActivity = null;
+
+	private static final int REQUEST_CODE = 1;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -257,29 +260,44 @@ public class MessagesActivity extends AnalyticsBaseActivity {
 			i.putExtra(ConstantKeys.GROUP, mGroup);
 			startActivityForResult(i, AppUtils.GROUP_ADMIN);
 		} else if (itemId == R.id.group_phone) {
-			InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
-			imm.hideSoftInputFromWindow(((EditText) messagesActivity
-					.findViewById(R.id.upload_description_content))
-					.getWindowToken(), 0);
+			if (Build.VERSION.SDK_INT >= 23) {
+				if (MessagesActivity.this.checkSelfPermission(Manifest.permission.CAMERA)
+						== PackageManager.PERMISSION_GRANTED && MessagesActivity.this.checkSelfPermission(Manifest.permission.RECORD_AUDIO)
+						== PackageManager.PERMISSION_GRANTED) {
+					Intent i = new Intent(messagesActivity, RoomActivity.class);
+					i.putExtra(RoomActivity.EXTRA_ROOM_NAME, timeline.getParty().getId().toString());
+					i.putExtra(RoomActivity.EXTRA_USER_NAME, "userTest");
 
-			new AsyncTask<Void, Void, Void>() {
-				@Override
-				protected Void doInBackground(Void... params) {
-					SystemClock.sleep(200);
-					return null;
+					messagesActivity.startActivity(i);
+				} else {
+					requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO},
+							REQUEST_CODE);
 				}
+			} else { //permission is automatically granted on sdk<23 upon installation
+				Intent i = new Intent(messagesActivity, RoomActivity.class);
+				i.putExtra(RoomActivity.EXTRA_ROOM_NAME, timeline.getParty().getId().toString());
+				i.putExtra(RoomActivity.EXTRA_USER_NAME, "userTest");
 
-				@Override
-				protected void onPostExecute(Void result) {
-					Window window = getWindow();
-					View v = window.getDecorView();
-					callQuickAction.show(v.findViewById(R.id.group_phone));
-				}
-			}.execute();
+				messagesActivity.startActivity(i);
+			}
 		}
 
 		return super.onOptionsItemSelected(item);
 	}
+
+
+	@Override
+	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+		if(requestCode == REQUEST_CODE && grantResults[0]== PackageManager.PERMISSION_GRANTED && grantResults[1]== PackageManager.PERMISSION_GRANTED){
+			Intent i = new Intent(messagesActivity, RoomActivity.class);
+			i.putExtra(RoomActivity.EXTRA_ROOM_NAME, timeline.getParty().getId().toString());
+			i.putExtra(RoomActivity.EXTRA_USER_NAME, "userTest");
+
+			messagesActivity.startActivity(i);
+		}
+	}
+
 
 	private void configureCallPopup() {
 		ActionItem callItem = new ActionItem(ID_CALL, null, messagesActivity
